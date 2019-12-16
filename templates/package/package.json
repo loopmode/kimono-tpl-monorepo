@@ -1,0 +1,27 @@
+{
+  "name": "<%= packageScope %>/<%= packageName %>",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+
+
+  <% if (license) { %>"license": "<%=license%>",<% } %>
+  <% if (homepage) { %>"homepage": "<%=homepage%>",<% } %>
+
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rm -rf lib/* && rm -f tsconfig.tsbuildinfo",
+    "rebuild": "yarn clean && yarn build",
+    "test": "jest",
+    "prepublishOnly": "yarn build",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+
+  <% if (repository && repository.url) { %>,
+  "repository": <%- JSON.stringify(repository) %>
+  <% } %>
+
+  <% if (publishConfig) { %>,
+  "publishConfig": <%- JSON.stringify(publishConfig) %>
+  <% } %>
+}

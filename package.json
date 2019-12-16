@@ -1,0 +1,76 @@
+{
+  "name": "<%= packageScope %>/workspace",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "configs/*",
+      "packages/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "version": "0.0.0",
+  "main": "",
+  "author": "",
+  "contributors": [],
+
+  <% if (repository && repository.url) { %>
+  "repository": <%- JSON.stringify(repository) %>,
+  <% } %>
+
+  <% if (publishConfig) { %>,
+  "publishConfig": <%- JSON.stringify(publishConfig) %>,
+  <% } %>
+  
+  "scripts": {
+    "setup": "sh scripts/setup.sh",
+    "start": "start-storybook -s ./.storybook/public -p 9001",
+    "build": "lerna run build --stream",
+    "watch": "lerna run build && lerna run watch --stream --parallel",
+    "clean": "lerna run clean --stream",
+    "rebuild": "lerna run rebuild --stream",
+    "test": "lerna run test --stream",
+    "lint": "lerna run lint --stream --",
+    "test:coverage": "jest --coverage",
+    "create:package": "sh scripts/create-package.sh",
+    "create:component": "sh scripts/create-component.sh"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-typescript": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-docs": "^5.2.8",
+    "@storybook/addon-knobs": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addon-viewport": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@types/jest": "^24.0.23",
+    "@types/match-media-mock": "^0.1.5",
+    "@volkswagen-onehub/components-core": "^53.8.0",
+    "@volkswagen-onehub/icons-core": "^53.7.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-typescript-to-proptypes": "^1.1.0",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.4",
+    "lerna": "^3.19.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "react": "16.8.6",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-dom": "16.8.6",
+    "react-test-renderer": "16.8.6",
+    "styled-components": "3.4.10",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {}
+}

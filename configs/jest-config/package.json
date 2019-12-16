@@ -1,0 +1,5 @@
+{
+  "name": "<%= packageScope %>/jest-config",
+  "main": "./index.js",
+  "version": "0.0.1"
+}

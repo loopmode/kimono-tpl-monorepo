@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "<%= packageScope %>/base",
+    "<%= packageScope %>/typescript",
+    "<%= packageScope %>/react"
+  ]
+}

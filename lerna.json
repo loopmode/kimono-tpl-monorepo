@@ -1,0 +1,12 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent"<% if (typeof registry !== 'undefined' && registry) { %>,
+  "registry": "https://npm-restricted.extern.etecture.de/",<% } %>
+  "command": {
+    "publish": {
+      "npmClient": "npm",
+      "verifyAccess": false
+    }
+  }
+}

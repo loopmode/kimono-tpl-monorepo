@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es5",
+    "typeRoots": ["tsdec", "node_modules/@types"]
+  },
+  "exclude": [
+    "**/node_modules",
+    "**/*.stories.tsx",
+    "**/*.spec.tsx",
+    "**/*.spec.ts",
+    "**/templates"
+  ]
+}
