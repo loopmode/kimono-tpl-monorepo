@@ -1,5 +1,5 @@
 {
-  "name": "<%= packageScope %>/workspace",
+  "name": "<%= projectName %>-workspace",
   "private": true,
   "workspaces": {
     "packages": [
