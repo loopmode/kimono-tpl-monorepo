@@ -1,5 +1,5 @@
 {
-  "name": "<%= packageScope %>/jest-config",
+  "name": "<%= packageScope %><%= packageScope ? '/' : '' %>jest-config",
   "main": "./index.js",
   "version": "0.0.1"
 }

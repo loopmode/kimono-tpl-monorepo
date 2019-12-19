@@ -1,7 +1,7 @@
 {
   "version": "0.0.4",
   "private": true,
-  "name": "<%= packageScope %>/eslint-config-base",
+  "name": "<%= packageScope %><%= packageScope ? '/' : '' %>eslint-config-base",
   "main": ".eslintrc.js",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.11.0",

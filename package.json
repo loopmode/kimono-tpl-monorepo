@@ -23,9 +23,9 @@
   <% } %>
 
   <% if (publishConfig) { %>,
-  "publishConfig": <%- JSON.stringify(publishConfig) %>,
+    "publishConfig": <%- JSON.stringify(publishConfig) %>,
   <% } %>
-  
+
   "scripts": {
     "setup": "sh scripts/setup.sh",
     "start": "start-storybook -s ./.storybook/public -p 9001",
